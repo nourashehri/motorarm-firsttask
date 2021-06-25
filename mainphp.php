@@ -18,24 +18,24 @@
   
 
 
-$one= $_POST['first'];
-$two = $_POST['second'];
-$three = $_POST['third'];
-$four = $_POST['fourth'];
-$five = $_POST['fifth'];
-$six = $_POST['sixth'];
 
 
 if(isset($_POST['save'])){
-
+$one= $_POST["a1"];
+$two = $_POST['a2'];
+$three = $_POST['a3'];
+$four = $_POST['a4'];
+$five = $_POST['a5'];
+$six = $_POST['a6'];
     echo "<br>";
+	
 
     $my_query = "";
 
     $my_query = "select * from my_project WHERE 1 ";
     $result = mysqli_query($connection, $my_query);
 
-$my_query = "INSERT INTO maindb (first, second, third, fourth, fifth, sixth) VALUES ('$one', '$two', '$three', '$four', '$five', $six)";    
+$my_query = "INSERT INTO `resulltdb` (`one`, `two`, `three`, `four`, `five`, `six`) VALUES ('$one', '$two', '$three', '$four', '$five', '$six')";   
 $result = mysqli_query($connection, $my_query);
     if($result)
     {
